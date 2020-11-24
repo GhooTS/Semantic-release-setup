@@ -56,6 +56,11 @@ jobs:
         with:
           name: Build Player
           path: build
+      - uses: papeloto/action-zip@v1
+        with:
+          files: build
+          recursive: false
+          dest: buildPlayer.zip
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
