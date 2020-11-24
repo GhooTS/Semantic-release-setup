@@ -42,8 +42,8 @@ jobs:
           versioning: None
       - uses: actions/upload-artifact@v2
         with:
-          name: PlayerBuild
-          path: Build
+          name: Build Player
+          path: build
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
