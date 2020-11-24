@@ -42,5 +42,9 @@ jobs:
           versioning: None
       - uses: actions/upload-artifact@v2
         with:
-          name: Build
-          path: build
+          name: PlayerBuild
+          path: Build
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx semantic-release
