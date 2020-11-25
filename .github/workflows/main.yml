@@ -2,7 +2,7 @@ name: Test And Build Player
 
 on:
   pull_request: {}
-  push: { branches: [main] }
+  push: { branches: ['+([0-9])?(.{+([0-9]),x}).x', 'master','main', 'next', 'next-major', 'beta', 'alpha'] }
 
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
