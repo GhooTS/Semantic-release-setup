@@ -4,7 +4,7 @@
         ["@semantic-release/commit-analyzer", {
 			"preset": "angular",
 			"releaseRules": [
-				{"type": "assets", "release": "prepatch"}
+				{"type": "assets", "release": "patch"}
 			]
 		}],
 		"@semantic-release/release-notes-generator",
